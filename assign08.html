@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title>Ajax/Json</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assign08.css">
+    <script type="text/javascript" src="assign08.js"></script>
+  </head>
+  <body>
+    <h1>Ajax and Json</h1>
+    <div>
+      <p><u>10 Largest cities</u></p>
+      <p>Please select country:<p>
+      <input type="radio" value="usa.txt" onclick="getRequest(value)" name="country">USA
+      <input type="radio" value="mexico.txt" onclick="getRequest(value)" name="country">Mexico
+      <input type="radio" value="canada.txt" onclick="getRequest(value)" name="country">Canada
+      <input type="radio" value="russia.txt" onclick="getRequest(value)" name="country">Russia
+      <p id="ajax"></p>
+    </div>
+    <hr>
+    <div>
+      <p><u>Students Info.</u></p>
+      <input type="text" value="" onblur="getRequest(value)" name="studentInfo">
+      <p id="json"></p>
+    </div>
+  </body>
+</html>

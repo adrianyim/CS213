@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Javascript Form Validation</title>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-with, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="assign05.css">
+      <script type="text/javascript" src="assign05.js"></script>
+    </head>
+    <body>
+        <header>
+          <h1>Javascript Form Validation</h1>
+        </header>
+        <form onsubmit="return validation()" onreset="getFocus()">
+            <table>
+                <tr><td>First Name: <input type="text" name="first" onblur="firstCheck()" id="first" autofocus required><span id="firstCK"></span></td></tr>
+                <tr><td>Last Name: <input type="text" name="last" onblur="lastCheck()" id="last" required><span id="lastCK"></span></td></tr>
+                <tr><td>Address: <textarea name="address" cols="40" rows="2" id="address" required></textarea></td></tr>
+                <tr><td>Phone: <input type="tel" name="phone" onblur="phoneCheck()" placeholder="123-456-7890" maxlength="12" id="phone" required><span id="phoneCK"></span></td></tr>
+                <tr><td>Price:<span id="priceCK"></span></td></tr>
+                <tr><td><input type="checkbox" name="item" value="1.99" onclick="totalPrice()" id="itemA">Soda $1.99</td></tr>
+                <tr><td><input type="checkbox" name="item" value="5.25" onclick="totalPrice()" id="itemB">Chicken Tenders Combo $5.25</td></tr>
+                <tr><td><input type="checkbox" name="item" value="10.47" onclick="totalPrice()" id="itemC">Grilled Chicken Sandwich $10.47</td></tr>
+                <tr><td><input type="checkbox" name="item" value="20.99" onclick="totalPrice()" id="itemD">Korean bbq $20.99</td></tr>
+                <tr><td><input type="checkbox" name="item" value="50" onclick="totalPrice()" id="itemE">Healthy Meal Plan for 1 week $50</td></tr>
+                <tr><td><input type="checkbox" name="item" value="100.99" onclick="totalPrice()" id="itemF">Panda Express for 1 month $100.99</td></tr>
+                <tr><td>Total price: <input type="text" value="$0.00" id="total"></td></tr>
+                <tr><td>Credit Card Type: <input type="radio" name="cardType" value="Visa">Visa<input type="radio" name="cardType" value="Mastercard">Mastercard<input type="radio" name="cardType" value="American Express" required>American Express</td></tr>
+                <tr><td>Credit Card number: <input type="text" name="cardNum" onblur="creditNumCheck()" placeholder="16 digits" maxlength="16" id="cardNum" required><span id="creditNumCK"></span></td></tr>
+                <tr><td>Credit Card Expiration Date:
+                    <select required>
+                    <option value="">Month</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option></select>
+                    <select required>
+                    <option value="">Year</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option></select></td></tr>
+                <tr><td><button type="reset">Reset</button><button type="submit">Submit</button></td></tr>
+            </table>
+        </form>
+    </body>
+</html>

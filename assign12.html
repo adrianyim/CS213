@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Piano Festival</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-with, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assign12.css">
+    <script src="assign12.js"></script>
+  </head>
+  <body>
+    <header>
+    <h2 class="center">Festival Registration</h2>
+    </header>
+    <br/>
+    <form id="infoForm" class="center">
+      Performance Type: 
+      <input type="radio" id="solo" name="type" value="solo" onchange="ndStudent()" checked> Solo
+      <input type="radio" id="duet" name="type" value="duet" onchange="ndStudent()"> Duet
+      <input type="radio" id="concerto" name="type" value="concerto" onchange="ndStudent()"> Concerto <br/>
+        <table>
+          <tr class="hide"><td id="firstError">First Name Error</td><td id="lastError">Last Name Error</td><td id="idError">Student ID Error</td><td id="skillError">Skill Error</td><td id="instError">Instrument Error</td><td id="locaError">Location Error</td><td id="roomError">Room Error</td><td id="timeError">Time Error</td></tr>
+          <tr><td>First Name</td><td>Last Name</td><td>Student ID</td><td>Skill Level</td><td>Instrument</td><td>Location</td><td>Room #</td><td>Time Slot</td></tr>
+          <tr><td><input type="text" id="first" maxlength="20" autofocus></td>
+            <td><input type="text" id="last" maxlength="20"></td>
+            <td><input type="text" id="studentId" maxlength="9" placeholder="9-digit"></td>
+            <td><select id="level">
+                <option value="none"></option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="pre-advanced">Pre-advanced</option>
+                <option value="advanced">Advanced</option>
+            </select></td>
+            <td><select id="instrument">
+                <option value="none"></option>
+                <option value="piano">Piano</option>
+                <option value="voice">Voice</option>
+                <option value="string">String</option>
+                <option value="organ">Organ</option>
+                <option value="other">Other</option>
+            </select></td>
+            <td><select id="location">
+                <option value="none"></option>
+                <option value="austin">Austin</option>
+                <option value="center">BYU-I Center</option>
+                <option value="benson">Benson</option>
+                <option value="hinckley">Hinckley</option>
+                <option value="romney">Romney</option>
+                <option value="smith">Smith</option>
+                <option value="snow">Snow</option>
+                <option value="spori">Spori</option>
+            </select></td>
+            <td><input type="text" id="room" size="4" maxlength="4" placeholder="101a"></td>
+            <td><select id="time">
+                <option value="none"></option>
+                <option value="8:00am">8:00am</option>
+                <option value="8:30am">8:30am</option>
+                <option value="9:00am">9:00am</option>
+                <option value="9:30am">9:30am</option>
+                <option value="10:00am">10:00am</option>
+                <option value="10:30am">10:30am</option>
+                <option value="11:00am">11:00am</option>
+                <option value="11:30am">11:30am</option>
+                <option value="12:00pm">12:00pm</option>
+                <option value="12:30pm">12:00pm</option>
+                <option value="1:00pm">1:00pm</option>
+                <option value="1:30pm">1:30pm</option>
+                <option value="2:00pm">2:00pm</option>
+                <option value="2:30pm">2:30pm</option>
+                <option value="3:00pm">3:00pm</option>
+                <option value="3:30pm">3:30pm</option>
+                <option value="4:00pm">4:00pm</option>
+                <option value="4:30pm">4:30pm</option>
+                <option value="5:00pm">5:00pm</option>
+                <option value="5:30pm">5:30pm</option>
+                <option value="6:00pm">6:00pm</option>
+                <option value="6:30pm">6:30pm</option>
+                <option value="7:00pm">7:00pm</option>
+                <option value="7:30pm">7:30pm</option>
+          </select></td></tr>
+          <tr class="nd" id="nd">
+            <td><input type="text" id="first2" size="20" maxlength="20"></td>
+            <td><input type="text" id="last2" maxlength="20"></td>
+            <td><input type="text" id="studetnId2" maxlength="9" placeholder="9-digit"></td></tr>
+          <tr><td colspan="8"><button type="button" onclick="register()">Register</button>
+        <input type="reset" value="Clear" onclick="focus()"></td></tr>
+        </table>
+    </form>
+    <h2 class="center">Student Info.</h2>
+    <div id="display"></div>
+  </body>
+</html>

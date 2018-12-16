@@ -1,0 +1,25 @@
+body {
+    background-color:#e0ebeb;
+}
+div {
+    background-color:gray;
+    font-size:18px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    background-color:gray;
+}
+p {
+    font-size:22px;
+}
+#ajax {
+    margin: auto;
+    position: relative;
+    left:35%;
+}
+#json {
+    margin: auto;
+    position: relative;
+    left:25%;
+}

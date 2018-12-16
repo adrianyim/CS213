@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Mortgage Calculator</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-with, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="assign04.css">
+        <script type="text/javascript" src="assign04.js"></script>
+    </head>
+    <body onload="welcome()">
+        <header>
+            <p class="top">Welcome to Mortgage Calculator Page!!</p>
+        </header>
+        <div>
+            <form>
+                <p>Annual Percentage Rate (APR):</p><input type="text" id="apr" autofocus><br>
+                <p>Loan Term (in years):</p><input type="text" id="term"><br>
+                <p>Loan Amount (in dollars):</p>$<input type="text" id="amount"><br>
+                <p>Monthly Payment =</p>
+                <p id="payment"></p>
+                <button type="button" onclick="calculation()" id="calculate">Calculate</button>
+                <button type="reset" onclick="getFocus()" onchange="getFocus()" id="clear">Clear</button><br>
+            </form>
+        </div>
+    </body>
+</html> 

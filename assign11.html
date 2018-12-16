@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mileage Calculator</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-with, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assign11.css">
+    <script src="assign11.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Mileage Calculator</h1>
+    </header>
+    <br>
+    <div class="center">
+      <span class="error" id="startCityError">Start City Input Error</span>
+      <span class="error" id="startStateError">Start State Input Error</span><br/>
+      Start: 
+      <input type="text" id="startCity" placeholder="Start City">
+      <input type="text" id="startState" placeholder="State" size="2" maxlength="2">
+    <br><br>
+    <span class="error" id="endCityError">End City Input Error</span>
+    <span class="error" id="endStateError">End State Input Error</span><br/>
+      End: 
+      <input type="text" id="endCity" placeholder="End City">
+      <input type="text" id="endState" placeholder="State" size="2" maxlength="2">
+    </div>
+    <br>
+    <div class="result">
+      <button onclick="validate()">Calculate Distance</button><br/>
+      <div id="demo"></div>
+    </div>
+  </body>
+</html>

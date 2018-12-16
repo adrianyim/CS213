@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PHP Mortgage Calculator</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-with, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assign04.css">
+    <!-- <script type="text/javascript" src="assign04.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <p class="top">Welcome to Mortgage Calculator Page</p>
+    </header>
+    <div>
+      <form action="mortgage.php" method="GET">
+        <p>Annual Percentage Rate (APR):</p><input type="text" name="apr" autofocus><br>
+        <p>Loan Term (in years):</p><input type="text" name="term"><br>
+        <p>Loan Amount (in dollars):</p>$<input type="text" name="amount"><br>
+        <input type="submit" value="Submit">
+        <button type="reset" onclick="getFocus()" onchange="getFocus()" id="clear">Clear</button><br>
+      </form>
+    </div>
+  </body>
+</html>
+

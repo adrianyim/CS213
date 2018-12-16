@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Panda Express</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-with, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assign10.css">
+    <script src="assign10.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 >Panda Express Order List</h1>
+    </header>
+    <div>
+      <form onsubmit="return validation()" onreset="getFocus()" action="assign10_a.php" method="get">
+        <table>
+          <tr><td id="TD">First Name: <input type="text" name="first" onblur="firstCheck()" id="first" autofocus required></td><td><p id="firstCK"></td><td id="img_TD" rowspan="16"><img src="Panda_Express.png" alt="panda express logo"></td></tr>
+          <tr><td>Last Name: <input type="text" name="last" onblur="lastCheck()" id="last" required></td><td><p id="lastCK"></td></tr>
+          <tr><td>Address: <textarea name="address" cols="40" rows="2" id="address" required></textarea></td></tr>
+          <tr><td>Phone: <input type="tel" name="phone" onblur="phoneCheck()" placeholder="123-456-7890" maxlength="12" id="phone" required></td><td><p id="phoneCK"></td></tr>
+          <tr><td>Price:</td><td><p id="priceCK"></td></tr>
+          <tr><td><input type="checkbox" name="item[]" value="1.99" onclick="totalPrice()" class="item">Soda $1.99</td></tr>
+          <tr><td><input type="checkbox" name="item[]" value="5.25" onclick="totalPrice()" class="item">Chicken Tenders Combo $5.25</td></tr>
+          <tr><td><input type="checkbox" name="item[]" value="10.47" onclick="totalPrice()" class="item">Grilled Chicken Sandwich $10.47</td></tr>
+          <tr><td><input type="checkbox" name="item[]" value="20.99" onclick="totalPrice()" class="item">Korean bbq $20.99</td></tr>
+          <tr><td><input type="checkbox" name="item[]" value="50" onclick="totalPrice()" class="item">Healthy Meal Plan for 1 week $50</td></tr>
+          <tr><td><input type="checkbox" name="item[]" value="100.99" onclick="totalPrice()" class="item">Panda Express for 1 month $100.99</td></tr>
+          <tr><td>Total price: <input type="text" value="$0.00" name="total" id="total"></td></tr>
+          <tr><td>Credit Card Type: <input type="radio" name="cardType" value="Visa" id="cardType">Visa<input type="radio" name="cardType" value="Mastercard">Mastercard<input type="radio" name="cardType" value="American Express" required>American Express</td></tr>
+          <tr><td>Credit Card number: <input type="text" name="cardNum" onblur="creditNumCheck()" placeholder="16 digits" maxlength="16" id="cardNum" required></td><td><p id="creditNumCK"></td></tr>
+          <tr><td>Credit Card Expiration Date: 
+              <select required name="month" id="month">
+                <option value="">Month</option>
+                <option value="January">01</option>
+                <option value="February">02</option>
+                <option value="March">03</option>
+                <option value="Apirl">04</option>
+                <option value="May">05</option>
+                <option value="June">06</option>
+                <option value="July">07</option>
+                <option value="Augest">08</option>
+                <option value="September">09</option>
+                <option value="Octorber">10</option>
+                <option value="November">11</option>
+                <option value="December">12</option></select>
+              <select required name="year" id="year">
+                <option value="">Year</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option></select></td></tr>
+          <tr><td><button type="reset">Reset</button><button type="submit">Submit</button></td></tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

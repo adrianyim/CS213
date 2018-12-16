@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mortgage Calculator Lab09</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="eidth=device-with, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assign04.css">
+    <script>
+    var httpRequest;
+    function getRequest() {
+    httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200){
+            ajaxRequest(this.responseText);
+        }
+    }
+    httpRequest.open("GET","assign09.php",true);
+    httpRequest.send();
+    }
+
+    function ajaxRequest(responseText) {
+        var myObj = JSON.parse(responseText);
+        var text = "<table id=\"t01\"> <tr> <th>Filename</th> <th>Type</th> <th>CWD</th> <th>Action</th> </tr> ";
+        for (k = 0; k < myObj.length; k++){
+            var filename = myObj[k].fileName;
+            var filetype = myObj[k].fileType;
+            var cwd = myObj[k].cwd;
+            text +=  "<tr> <td>" + filename + "</td> <td>" + filetype + "</td> <td>" + cwd + "</td>"; 
+            if (filetype == "file")
+            text += "<td> <button type=\"button\" onclick=\"window.open('" + filename + "','_blank')\">Display</button>" + "</td>";
+            else
+            text += "<td></td>";
+            text += "</tr>";
+        }
+        text += "</table>";
+        document.getElementById("dir").innerHTML = text;
+    }
+    </script>
+  </head>
+  <body>
+    <header>
+      <p class="top">Welcome to Assignment 09 Home Page</p>
+    </header>
+    <div class="mortgage">
+      <a href="\mortgage.html">Mortgage Calculator</a>
+    </div>
+<br>
+    <div class="center">
+      <button type="button" onclick="getRequest()">Display Directory</button>
+    </div>
+    <p id="dir"></p>
+  </body>
+</html>

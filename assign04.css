@@ -1,0 +1,42 @@
+.center {
+    text-align:center;
+}
+.top {
+    text-align:center;
+    color:lightblue;
+    font-weight:bold;
+    font-size:40px;
+}
+.mortgage {
+    text-align: center;
+    background-color: lightblue;
+    color: darkblue;
+}
+.mortgage a{
+    text-decoration:none;
+}
+.mortgage a:hover {
+    background-color: white;
+    color: #003366;
+}
+.back {
+    display: flex;
+    justify-content: flex-end;
+}
+.back a{
+    text-decoration:none;
+}
+.back a:hover {
+    background-color: lightblue;
+}
+.month {
+    background-color: FF5733;
+    text-align: center;
+    font-size: 30px;
+    color: lightblue;
+}
+form {
+    text-align: center;
+    border: 2px solid darkcyan;
+    margin: 5% 40% 10% 40%;
+}

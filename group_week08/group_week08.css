@@ -1,0 +1,153 @@
+*{
+box-sizing: border-box;
+}
+body {
+margin: 0;
+font-size: 62.5%;
+}
+ul {
+padding-left: 0;
+}
+.blue_rounded {
+border: 2px solid #26607F;
+border-radius: 0.5rem;
+background-color: #0076b6;
+font-size: 1.2rem;
+font-weight: bold;
+margin: 1rem;
+padding: 1rem;
+}
+.white_rounded {
+border: 2px solid #26607F;
+border-radius: 0.5rem;
+background-color: #fff;
+font-size: 1.2rem;
+font-weight: bold;
+padding: 1rem;
+width: 100%;
+}
+#flex_first {
+width: 80vw;
+height: 20vh;
+min-height: 15rem;
+display: flex;
+justify-content: center;
+margin-top: 1rem;
+margin: auto;
+align-items: center;
+}
+.center_list {
+flex-direction: column;
+width: auto;
+list-style-position: inside;
+}
+#flex_second_wrapper{
+list-style-type: none;
+display: flex;
+flex-direction: column;
+}
+.form-row, .form-row > * {
+padding: 0.5rem;
+}
+.form-row > fieldset {
+background-color: #fff;
+}
+.form-row > button {
+width:auto;
+margin: 0.5rem;
+}
+.placeholder_image {
+background-color: #26607F;
+height: 10rem;
+}
+.flex_div {
+color: #fff;
+}
+input, select {
+display: flex;
+width: 100%;
+}
+button[type=submit], button[type=clear] {
+width: 100%;
+text-align: center;
+}
+label {
+display: flex;
+}
+textarea {
+display: flex;
+width: 100%;
+}
+input[type=radio], input[type=checkbox]{
+display: flex;
+width: 1rem;
+}
+/*(8)*/
+@media screen and (min-width: 0) {
+#grid_first {
+display: grid;
+grid-gap: 1rem;
+grid-template-columns: 1fr;
+}
+
+}
+@media screen and (min-width: 600px) {
+#grid_first {
+display: grid;
+grid-gap: 1rem;
+grid-template-columns: 1fr 1fr;
+}
+}
+@media screen and (min-width: 1200px) {
+#grid_first {
+display: grid;
+grid-gap: 1rem;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+}
+/*(9)*/
+@media screen and (min-width: 0) {
+#grid_second {
+display: grid;
+grid-gap: 1rem;
+min-height: 100px;
+}
+#grid_second > div {
+min-height: 100px;
+width: auto;
+}
+}
+@media screen and (min-width: 600px) {
+#grid_second {
+display: grid;
+grid-gap: 1rem;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 2fr 1fr 1fr 1fr auto;
+}
+
+.box9 {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+.box1 {
+grid-column: 1 / 3;
+}
+
+}
+@media screen and (min-width: 1200px) {
+.box1 {
+grid-column: 1 / 4;
+}
+#grid_second {
+display: grid;
+grid-gap: 1rem;
+grid-template-columns: auto;
+grid-template-rows: 2fr auto;
+}
+.box9 {
+display: flex;
+justify-content: center;
+flex-direction: row;
+}
+}

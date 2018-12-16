@@ -1,0 +1,20 @@
+.nd{
+    color: red;
+    visibility: hidden;
+}
+.center {
+    text-align: center;
+}
+table {
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    background-color: #73C6B6;
+    border-radius: 15px;
+}
+.hide {
+    color: red;
+    visibility: hidden;
+}

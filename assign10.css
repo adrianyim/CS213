@@ -1,0 +1,42 @@
+body {
+    background-color: #ebd6a9;
+    text-align:center;
+}
+h1 {
+    text-align: center;
+    background-color: #d1282e;
+    color: white;
+}
+table {
+    text-align:left;
+    margin:10px 10px;
+}
+footer {
+    text-align:center;
+    width:15%;
+    height:auto;
+}
+.center {
+    text-align: center;
+    background-color: #d1282e;
+    color: white;
+}
+.center_1 {
+    margin: 10px 30% 100px 30%;
+}
+div {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    order:1;
+}
+td > TD {
+    width:40%;
+}
+img {
+    width:50%;
+    height:auto;
+}
+td > img_TD {
+    text-align:center;
+}
