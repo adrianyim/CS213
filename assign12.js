@@ -1,4 +1,4 @@
-var type, first, last, studentId, level, instrument, location, room, time, first2, last2, studentId2;
+var type, first, last, studentId, level, instrument, location, room, time, first2, last2, studentId2, error;
 
 function ndStudent() {
     if (document.getElementById("duet").checked == true) {
@@ -20,10 +20,10 @@ function register() {
     studentId = document.getElementById("studentId").value;
     level = document.getElementById("level").value;
     instrument = document.getElementById("instrument").value;
-    var location = document.getElementById("location").value;
+    location = document.getElementById("location").value;
     room = document.getElementById("room").value;
     time = document.getElementById("time").value;
-    var error = true;
+    error = true;
 
     if (first == "") {
         document.getElementById("firstError").style.visibility = "visible";
@@ -109,7 +109,7 @@ function register() {
 
 function getQuery() {
     var query = "?type=";
-    query += document.getElementsByName("type").value;
+    query += document.getElementsByName("type");
     query += "&firstName="
     query += document.getElementById("first").value;
     query += "&lastName="
@@ -135,8 +135,8 @@ function getQuery() {
         query += "&id2="
         query += document.getElementById("studentId2").value;
     }
-
-    var url = "assign12.php" + query;
+    document.getElementById('display').innerHTML = query;
+    var url = "http://localhost/~adrianyim/assign12.php" + query;
     getRequest(url);
 }
 
@@ -152,7 +152,7 @@ function getRequest(url) {
                 var data = JSON.parse(this.responseText);
                 
                 var output = "<table><tr><th>Type</th><th>First Name</th><th>Last Name</th><th>ID</th><th>Level</th><th>Instrument</th><th>Loaction</th><th>Time</th></tr>";
-                document.getElementById('display').innerHTML = output;
+                document.getElementById('display').innerHTML = url;
                 
                 for (var i = 0; i < data.length; i++) {
                     output += "<tr><td>" + data[i].type + "</td><td>" + data[i].first + "</td><td>" + data[i].last + "</td><td>" + data[i].id + "</td><td>" + data[i].level + "</td><td>" + data[i].instrument + "</td><td>" + data[i].location + "</td><td>" + data[i].time + "</td></tr>";
