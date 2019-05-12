@@ -8,9 +8,7 @@
   </head>
   <body>
     <?php
-    <div>
-      echo "The order has been cancelled!";
-    </div>
+      echo ("The order has been cancelled!");
     ?>
   </body>
 </html>
